@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champaint Worx | Premium Flooring & Tables</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .epoxy-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-xl font-bold text-indigo-600">Champaint Worx</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="text-indigo-600 hover:bg-indigo-50 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="#services" class="text-gray-700 hover:bg-indigo-50 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="#gallery" class="text-gray-700 hover:bg-indigo-50 px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
+                            <a href="#about" class="text-gray-700 hover:bg-indigo-50 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#contact" class="text-gray-700 hover:bg-indigo-50 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-300">Get a Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#gallery" class="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+                <a href="#about" class="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#contact" class="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="#contact" class="bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Epoxy Excellence, <span class="epoxy-bg bg-clip-text text-transparent">Crafted to Last.</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Premium epoxy flooring solutions and custom epoxy resin tables that blend durability with breathtaking design.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-300">Our Services</a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-indigo-600 px-6 py-3 rounded-lg text-lg font-semibold transition duration-300">Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From elegant floors to stunning furniture pieces, we bring your vision to life with epoxy.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Epoxy Flooring</h3>
+                    <p class="text-gray-600 mb-4">High-performance epoxy coatings for garages, basements, commercial spaces, and more. Durable, easy to clean, and available in countless designs.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> 100% seamless surface</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Chemical & stain resistant</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> 10+ year warranty</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-table text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Epoxy Tables</h3>
+                    <p class="text-gray-600 mb-4">Handcrafted epoxy resin tables that become the centerpiece of any room. Choose from river tables, geode designs, or fully custom creations.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Premium hardwoods</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Custom colors & effects</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Food-safe finishes</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Epoxy Repairs & Maintenance</h3>
+                    <p class="text-gray-600 mb-4">We restore damaged epoxy surfaces and provide professional maintenance to keep your floors and furniture looking like new.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Crack & chip repairs</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Surface refinishing</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-indigo-500 mr-2"></i> Protective coatings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Epoxy Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Browse our recent projects to see the transformative power of epoxy.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/Modern%20Garage%20Floor.jpg" alt="Epoxy flooring" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Garage Floor</h3>
+                        <p class="text-gray-600">Flake epoxy system with metallic accents in a contemporary home garage.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/River%20Epoxy%20Table.jpg" alt="Epoxy table" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">River Epoxy Table</h3>
+                        <p class="text-gray-600">Custom walnut and blue epoxy river table with live edge details.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/Commercial%20Showroom.jpg" alt="Commercial epoxy floor" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Commercial Showroom</h3>
+                        <p class="text-gray-600">High-traffic epoxy flooring with decorative chips for a retail space.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/Geode%20Coffee%20Table.jpg" alt="Geode epoxy table" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Geode Coffee Table</h3>
+                        <p class="text-gray-600">Stunning geode-inspired epoxy table with amethyst crystals and gold leaf.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/Basement%20Transformation.jpg" alt="Basement epoxy floor" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Basement Transformation</h3>
+                        <p class="text-gray-600">Metallic epoxy flooring system creating a luxurious basement living space.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg bg-white">
+                    <img src="images/Executive%20Conference%20Table.jpg" alt="Conference table" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Executive Conference Table</h3>
+                        <p class="text-gray-600">Custom epoxy and wood table for a corporate boardroom with company logo integration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+                    Request Custom Project
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Crafting Epoxy Excellence Since 2025</h2>
+                    <p class="text-lg text-gray-600 mb-6">At Champaint Worx, we combine technical expertise with artistic vision to deliver epoxy solutions that exceed expectations.</p>
+                    <p class="text-lg text-gray-600 mb-6">Our founder, Kohl Valentine, started with a passion for woodworking and discovered the magic of epoxy resin. What began as a hobby quickly grew into a full-service business serving residential and commercial clients across the country.</p>
+                    <p class="text-lg text-gray-600 mb-8">We take pride in using only premium materials, innovative techniques, and meticulous attention to detail in every project we undertake.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-medal text-indigo-600 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">100+</h4>
+                                <p class="text-gray-600">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-award text-indigo-600 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">99</h4>
+                                <p class="text-gray-600">Happy customers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-smile text-indigo-600 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">100%</h4>
+                                <p class="text-gray-600">Satisfaction Guarantee</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-indigo-600 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">5</h4>
+                                <p class="text-gray-600">Expert Craftsmen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative rounded-xl overflow-hidden shadow-xl">
+                        <img src="images/Image-3.jpg" alt="Our team working" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-indigo-600 text-white p-6 rounded-xl shadow-xl floating">
+                        <h3 class="text-xl font-bold mb-2">5+ Years</h3>
+                        <p class="text-sm">Of epoxy expertise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 epoxy-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Don't just take our word for it - hear from our satisfied customers.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-indigo-200">Homeowner</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">"Our garage floor transformation is stunning! The team was professional, clean, and delivered exactly what they promised. Two years later and it still looks brand new."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael T.</h4>
+                            <p class="text-indigo-200">Restaurant Owner</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">"The epoxy floors in our commercial kitchen have held up perfectly against heavy traffic, spills, and cleaning. Far exceeded our expectations for durability."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer L.">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Jennifer L.</h4>
+                            <p class="text-indigo-200">Interior Designer</p>
+                        </div>
+                    </div>
+                    <p class="mb-4">"The custom epoxy river table they created for my client's penthouse is absolutely breathtaking. The craftsmanship is museum-quality and it's the talk of every gathering."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Space?</h2>
+                    <p class="text-lg text-gray-600 mb-8">Get in touch for a free consultation and quote. We'll discuss your vision, provide expert recommendations, and outline the perfect epoxy solution for your needs.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Call Us</h3>
+                                <p class="text-gray-600">+27 81 058 8205</p>
+                                <p class="text-sm text-gray-500">Mon-Sat, 9am-5pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email Us</h3>
+                                <p class="text-gray-600">champaintworx@outlook.com</p>
+                                <p class="text-sm text-gray-500">Typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Located in</h3>
+                                <p class="text-gray-600">88 Loerie Road, Bridgetown</p>
+                                <p class="text-gray-600">Athlone, Western Cape 7764</p>
+                                <p class="text-sm text-gray-500">By appointment only</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Follow Our Work</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-indigo-600">
+                                <i class="fab fa-facebook-f text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-indigo-600">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-indigo-600">
+                                <i class="fab fa-pinterest-p text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-indigo-600">
+                                <i class="fab fa-youtube text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get Your Free Quote</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700">Service Needed</label>
+                                <select id="service" name="service" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                    <option value="">Select a service</option>
+                                    <option value="epoxy-flooring">Epoxy Flooring</option>
+                                    <option value="epoxy-table">Epoxy Table</option>
+                                    <option value="repair">Repair/Maintenance</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Project Details</label>
+                                <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300">
+                                    Submit Request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">How long does epoxy flooring last?</span>
+                        <span class="ml-6 flex items-center">
+                            <svg class="h-6 w-6 transform transition-transform duration-200" :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 text-gray-600">
+                        <p>Our premium epoxy flooring systems typically last 10-20 years with proper maintenance. Commercial installations may require recoating after 8-12 years depending on traffic levels. We offer a 10-year warranty on all residential installations.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Can epoxy tables be used outdoors?</span>
+                        <span class="ml-6 flex items-center">
+                            <svg class="h-6 w-6 transform transition-transform duration-200" :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 text-gray-600">
+                        <p>While epoxy is UV-resistant, prolonged direct sunlight can cause fading over time. We recommend keeping epoxy tables under covered patios or using UV-protective sealants for full outdoor exposure. Our outdoor-rated epoxy formulations come with a 5-year warranty against yellowing and cracking.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">How do I maintain my epoxy floor?</span>
+                        <span class="ml-6 flex items-center">
+                            <svg class="h-6 w-6 transform transition-transform duration-200" :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 text-gray-600">
+                        <p>Epoxy floors are incredibly low-maintenance. For daily cleaning, simply sweep or dust mop. For deeper cleaning, use a pH-neutral cleaner and warm water. Avoid harsh chemicals or abrasive tools. We recommend applying a maintenance coat every 3-5 years for high-traffic areas to keep your floor looking its best.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">How long does it take to create a custom epoxy table?</span>
+                        <span class="ml-6 flex items-center">
+                            <svg class="h-6 w-6 transform transition-transform duration-200" :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 text-gray-600">
+                        <p>The timeline varies based on complexity, size, and our current project queue. Simple river tables typically take 4-6 weeks from design approval to completion. More intricate designs with embedded elements or custom pigments may take 8-12 weeks. We'll provide a detailed timeline during your consultation.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button @click="open = !open" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-900">Can epoxy be applied over existing flooring?</span>
+                        <span class="ml-6 flex items-center">
+                            <svg class="h-6 w-6 transform transition-transform duration-200" :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div x-show="open" x-collapse class="px-6 pb-6 text-gray-600">
+                        <p>In most cases, yes! Epoxy can be applied over concrete, tile, vinyl, and even some wood surfaces after proper preparation. During our site evaluation, we'll assess your existing floor and recommend any necessary repairs or primers. The only surfaces we typically can't coat are carpet or flexible flooring materials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Champaint Worx</h3>
+                    <p class="text-gray-400">Transforming spaces with premium epoxy solutions since 2025.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Epoxy Flooring</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Custom Tables</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Repairs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Gallery</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <address class="not-italic text-gray-400">
+                        <p>88 Loerie Road, Bridgetown</p>
+                        <p>Athlone, Western Cape 7764</p>
+                        <p class="mt-2">Phone: +27 81 058 8205</p>
+                        <p>Email: champaintworx@outlook.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Champaint Worx (Pty) LTD. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
