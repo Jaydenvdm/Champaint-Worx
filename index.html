@@ -625,11 +625,41 @@
         });
 
         // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We will contact you shortly.');
-            this.reset();
-        });
+        //document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //    e.preventDefault();
+        //    alert('Thank you for your inquiry! We will contact you shortly.');
+        //    this.reset();
+        //});
+        
+                document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        service: form.service.value,
+        message: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwjOM0iY5gL5h5PNfcOuLqumTr-sKnw3YZIONwIoz2f-UH958r85hm-Da4sRU3JAfo1tA/exec", {
+        method: "POST",
+        mode: "no-cors", // <-- Add this line
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Form submitted successfully!");
+        form.reset(); // clear the form
+    })
+    .catch(error => {
+        alert("Error submitting form: " + error);
+    });
+});
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
